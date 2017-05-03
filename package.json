@@ -1,0 +1,23 @@
+
+{
+  "name": "pkgtest",
+  "version": "1.0.0",
+  "description": "Rudimentary API packaged with pkg",
+  "author": "Valeri Karpov <val@karpov.io>",
+  "license": "ISC",
+  "dependencies": {
+    "archetype-js": "0.6.1",
+    "body-parser": "1.17.1",
+    "co": "4.6.0",
+    "express": "4.15.2",
+    "mongodb": "2.2.26"
+  },
+  "devDependencies": {
+    "pkg": "3.0.1"
+  },
+  "scripts": {
+    "build-dev": "pkg -t latest-linux-x64 -o ./app.dev ./index.js",
+    "build-prod": "pkg -t latest-linux-x64 -o ./app ./.prod/app.js",
+    "start": "node ."
+  }
+}
